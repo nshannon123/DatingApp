@@ -7,12 +7,6 @@ namespace DatingApp.API.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<DateTime>(
-                name: "Ceated",
-                table: "Users",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
             migrationBuilder.AddColumn<string>(
                 name: "City",
                 table: "Users",
@@ -22,6 +16,12 @@ namespace DatingApp.API.Migrations
                 name: "Country",
                 table: "Users",
                 nullable: true);
+
+            migrationBuilder.AddColumn<DateTime>(
+                name: "Created",
+                table: "Users",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DateofBirth",
@@ -95,15 +95,15 @@ namespace DatingApp.API.Migrations
                 name: "Photos");
 
             migrationBuilder.DropColumn(
-                name: "Ceated",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
                 name: "City",
                 table: "Users");
 
             migrationBuilder.DropColumn(
                 name: "Country",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Created",
                 table: "Users");
 
             migrationBuilder.DropColumn(

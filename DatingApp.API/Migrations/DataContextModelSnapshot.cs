@@ -43,11 +43,11 @@ namespace DatingApp.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Ceated");
-
                     b.Property<string>("City");
 
                     b.Property<string>("Country");
+
+                    b.Property<DateTime>("Created");
 
                     b.Property<DateTime>("DateofBirth");
 
